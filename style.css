@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;;
+}
+.register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+.register input{
+    padding: 20px;
+    margin: 5px;
+    border: none;
+    border-bottom:  2px solid blueviolet;
+}
+.register button{
+    padding: 20px;
+    width: 100%;
+    margin: 5px;
+    border-radius: 2px;
+    background-color: burlywood;
+}
+
+/* admin add_book.php */
+
+.admin_add_book{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+.admin_add_book input{
+    padding: 20px;
+    margin: 5px;
+    border: none;
+    border-bottom:  2px solid blueviolet;
+}
+.admin_add_book button{
+    padding: 20px;
+    width: 100%;
+    margin: 5px;
+    border-radius: 2px;
+    background-color: burlywood;
+}
+.file{
+    border: none!important;
+    width: 100%;
+}
+
+.view_books{
+    width: 100%;
+}
+
+.view_books table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.view_books tr,
+.view_books th{
+    border-bottom: 2px solid green;
+}
+
+.view_books td{
+    border: none;
+    background-color: antiquewhite;
+    text-align: center;
+}
