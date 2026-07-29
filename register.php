@@ -6,9 +6,11 @@ $message = "";
 $message_type = "";
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    $name     = mysqli_real_escape_string($conn, $_POST['name']);
-    $email    = mysqli_real_escape_string($conn, $_POST['email']);
+    $name     = mysqli_real_escape_string($conn, trim($_POST['name']));
+    $email    = mysqli_real_escape_string($conn, trim($_POST['email']));
     $password = mysqli_real_escape_string($conn, $_POST['password']);
+    $address  = mysqli_real_escape_string($conn, trim($_POST['address']));
+    $mobile   = mysqli_real_escape_string($conn, trim($_POST['mobile']));
     $role     = "user";
 
     // Check if email already exists
@@ -17,8 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $message = "This email is already registered.";
         $message_type = "error";
     } else {
-        $sql = "INSERT INTO users (name, email, password, role)
-                VALUES ('$name', '$email', '$password', '$role')";
+        $sql = "INSERT INTO users (name, email, password, address, mobile, role)
+                VALUES ('$name', '$email', '$password', '$address', '$mobile', '$role')";
 
         if (mysqli_query($conn, $sql)) {
             $message = "You have registered successfully! You can now login.";
@@ -38,52 +40,33 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <title>Register</title>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial;
-            background: #f4f4f4;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; background: #f0f2f5; }
 
         /* Sidebar */
         .sidebar {
-            width: 200px;
-            height: 100vh;
-            background: #2c3e50;
-            color: white;
-            position: fixed;
-            padding-top: 20px;
+            width: 220px; height: 100vh; background: #2c3e50;
+            color: white; position: fixed; top: 0; left: 0;
+            padding-top: 20px; z-index: 100;
         }
-
         .sidebar h3 {
-            text-align: center;
+            text-align: center; margin-bottom: 20px;
+            font-size: 16px; padding: 0 10px; color: #ecf0f1;
         }
-
         .sidebar a {
-            display: block;
-            color: white;
-            padding: 12px;
-            text-decoration: none;
+            display: block; color: #bdc3c7;
+            padding: 12px 20px; text-decoration: none;
+            font-size: 14px; transition: background 0.2s, color 0.2s;
         }
-
         .sidebar a:hover,
-        .sidebar a.active {
-            background: #34495e;
-        }
+        .sidebar a.active { background: #34495e; color: #fff; }
 
         /* Main */
-        .main {
-            margin-left: 210px;
-            padding: 20px;
-        }
+        .main { margin-left: 220px; padding: 30px; }
 
-        h2 {
-            color: #2c3e50;
-            margin-bottom: 20px;
+        .page-title {
+            font-size: 22px; font-weight: bold;
+            color: #2c3e50; margin-bottom: 24px;
         }
 
         /* Register Card */
@@ -209,7 +192,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 <!-- Main Content -->
 <div class="main">
-    <h2>Create an Account</h2>
+    <div class="page-title">Create an Account</div>
 
     <div class="register-card">
         <h3>Registration Form</h3>
@@ -231,6 +214,18 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password"
                        placeholder="Enter your password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address"
+                       placeholder="Enter your address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <input type="tel" id="mobile" name="mobile"
+                       placeholder="Enter your mobile number" required>
             </div>
 
             <input type="hidden" name="role" value="user">
