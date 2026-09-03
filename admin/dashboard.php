@@ -89,7 +89,6 @@ $book_result = mysqli_query($conn, $book_sql);
     </style>
 </head>
 <body>
-
 <div class="sidebar">
     <h3>Admin Dashboard</h3>
     <a href="dashboard.php" class="active">Dashboard</a>
@@ -101,7 +100,6 @@ $book_result = mysqli_query($conn, $book_sql);
     <a href="history_user.php">History</a>
     <a href="../logout.php">Logout</a>
 </div>
-
 <div class="main">
     <div class="page-title">Available Books</div>
 
@@ -141,8 +139,7 @@ $book_result = mysqli_query($conn, $book_sql);
         <?php endif; ?>
     </div>
 
-    <footer><p>Najrul LIBRARY</p></footer>
+    <footer><p>NAJRUL LIBRARY</p></footer>
 </div>
-
 </body>
 </html>
