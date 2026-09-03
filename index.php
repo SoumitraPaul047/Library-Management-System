@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 include "db.php";
@@ -271,7 +270,7 @@ if (!$result) {
     <?php endif; ?>
 </div>
 
-<!-- Main Content -->
+<!-- Main Contents -->
 <div class="main">
     <h2>
         <?php
@@ -302,7 +301,7 @@ if (!$result) {
         </div>
     <?php endif; ?>
 
-    <footer><p>Najrul LIBRARY</p></footer>
+    <footer><p>NAJRUL LIBRARY</p></footer>
 </div>
 </body>
 </html>
