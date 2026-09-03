@@ -190,7 +190,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <?php endif; ?>
 </div>
 
-<!-- Main Content -->
+<!-- Main Contents -->
 <div class="main">
     <div class="page-title">Create an Account</div>
 
@@ -244,7 +244,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         </div>
     </div>
 
-    <footer><p>Najrul LIBRARY</p></footer>
+    <footer><p>NAJRUL LIBRARY</p></footer>
 </div>
 
 </body>
