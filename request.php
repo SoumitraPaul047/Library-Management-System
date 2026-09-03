@@ -184,7 +184,7 @@ if (isset($_POST['request_book'])) {
         <?php endif; ?>
     </div>
 
-    <footer><p>Najrul LIBRARY</p></footer>
+    <footer><p>NAJRUL LIBRARY</p></footer>
 </div>
 
 </body>
