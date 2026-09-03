@@ -1,7 +1,6 @@
 <?php
 session_start();
 include "../db.php";
-
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] != "admin") {
     header("Location: ../login.php");
     exit();
@@ -98,7 +97,6 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != "admin") {
     </script>
 </head>
 <body>
-
 <div class="sidebar">
     <h3>Admin Dashboard</h3>
     <a href="dashboard.php">Dashboard</a>
@@ -110,7 +108,6 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != "admin") {
     <a href="history_user.php">History</a>
     <a href="../logout.php">Logout</a>
 </div>
-
 <div class="main">
     <div class="page-title">All Transactions</div>
 
@@ -168,9 +165,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != "admin") {
         <?php endif; ?>
         </tbody>
     </table>
-
-    <footer><p>Najrul LIBRARY</p></footer>
+    <footer><p>NAJRUL LIBRARY</p></footer>
 </div>
-
 </body>
 </html>
