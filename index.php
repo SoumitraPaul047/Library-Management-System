@@ -1,14 +1,13 @@
+
 <?php
 session_start();
 include "db.php";
-
 /* SEARCH LOGIC */
 $search      = "";
 $search_type = "title"; // default
-
 if (isset($_GET['search']) && $_GET['search'] !== "") {
     $search = mysqli_real_escape_string($conn, trim($_GET['search']));
-
+    
     // Get search type, default to title
     $search_type = (isset($_GET['search_type']) && $_GET['search_type'] === "author") 
                    ? "author" 
@@ -23,15 +22,14 @@ if (isset($_GET['search']) && $_GET['search'] !== "") {
                 WHERE quantity > 0 
                 AND title LIKE '%$search%'";
     }
-
-} else {
+} 
+else {
     // No search — also preserve search_type if set
     $search_type = (isset($_GET['search_type']) && $_GET['search_type'] === "author")
                    ? "author"
                    : "title";
     $sql = "SELECT * FROM books WHERE quantity > 0";
 }
-
 $result = mysqli_query($conn, $sql);
 
 if (!$result) {
@@ -128,7 +126,7 @@ if (!$result) {
             padding: 8px 10px;
             border: none;
             border-radius: 4px;
-            font-size: 13px;
+            font-size: 14px;
             background: #3d5166;
             color: white;
             outline: none;
@@ -146,7 +144,7 @@ if (!$result) {
             color: white;
             border: none;
             border-radius: 4px;
-            font-size: 13px;
+            font-size: 14px;
             cursor: pointer;
         }
 
@@ -306,6 +304,5 @@ if (!$result) {
 
     <footer><p>Najrul LIBRARY</p></footer>
 </div>
-
 </body>
 </html>
