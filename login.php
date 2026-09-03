@@ -1,9 +1,7 @@
-
 Login · PHP
 <?php
 session_start();
 include "db.php";
- 
 $message = "";
  
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
@@ -31,12 +29,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             }
  
         } else {
-            $message = "Incorrect password.";
+            $message = "Incorrect password!";
             $message_type = "error";
         }
  
     } else {
-        $message = "No account found with that email.";
+        $message = "No account found with that email.Try again!";
         $message_type = "error";
     }
 }
@@ -54,9 +52,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
  
         /* Sidebar */
         .sidebar {
-            width: 220px; height: 100vh; background: #2c3e50;
+            width: 230px; height: 110vh; background: #2c3e50;
             color: white; position: fixed; top: 0; left: 0;
-            padding-top: 20px; z-index: 100;
+            padding-top: 19px; z-index: 100;
         }
         .sidebar h3 {
             text-align: center; margin-bottom: 20px;
@@ -64,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         }
         .sidebar a {
             display: block; color: #bdc3c7;
-            padding: 12px 20px; text-decoration: none;
+            padding: 12px 19px; text-decoration: none;
             font-size: 14px; transition: background 0.2s, color 0.2s;
         }
         .sidebar a:hover,
@@ -74,13 +72,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         .main { margin-left: 220px; padding: 30px; }
  
         .page-title {
-            font-size: 22px; font-weight: bold;
+            font-size: 21px; font-weight: bold;
             color: #2c3e50; margin-bottom: 24px;
         }
  
         /* Login Card */
         .login-card {
-            width: 380px;
+            width: 378px;
             background: white;
             padding: 28px 30px;
             border-radius: 8px;
@@ -153,8 +151,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         }
  
         .register-link {
-            margin-top: 14px;
-            font-size: 13px;
+            margin-top: 15px;
+            font-size: 14px;
             color: #888;
             text-align: center;
         }
@@ -189,7 +187,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
  
 <!-- Main Content -->
 <div class="main">
-    <div class="page-title">Welcome Back</div>
+    <div class="page-title">Welcome Again!</div>
  
     <div class="login-card">
         <h3>Login to Your Account</h3>
@@ -221,9 +219,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         </div>
     </div>
  
-    <footer><p>Najrul LIBRARY</p></footer>
+    <footer><p>NAJRUL LIBRARY</p></footer>
 </div>
- 
 </body>
 </html>
  
