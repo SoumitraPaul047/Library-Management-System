@@ -1,12 +1,10 @@
 <?php
 session_start();
 include "../db.php";
-
 if (!isset($_SESSION['user_id'])) {
     header("Location: ../login.php");
     exit();
 }
-
 if ($_SESSION['role'] !== "admin") {
     header("Location: ../login.php");
     exit();
@@ -17,7 +15,6 @@ if (isset($_POST['mark_arrived'])) {
     $update     = "UPDATE request SET status='arrived' WHERE id='$request_id'";
     mysqli_query($conn, $update);
 }
-
 $sql    = "SELECT * FROM request";
 $result = mysqli_query($conn, $sql);
 if (!$result) die("Database Error: " . mysqli_error($conn));
@@ -154,7 +151,7 @@ if (!$result) die("Database Error: " . mysqli_error($conn));
         </tbody>
     </table>
 
-    <footer><p>Najrul LIBRARY</p></footer>
+    <footer><p>NAJRUL LIBRARY</p></footer>
 </div>
 
 </body>
