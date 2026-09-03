@@ -185,7 +185,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <a href="login.php" class="active">Login</a>
 </div>
  
-<!-- Main Content -->
+<!-- Main Contents -->
 <div class="main">
     <div class="page-title">Welcome Again!</div>
  
