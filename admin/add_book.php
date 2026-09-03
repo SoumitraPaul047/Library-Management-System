@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 if (!isset($_SESSION['user_id'])) {
     header("Location: ../login.php");
     exit();
@@ -183,7 +182,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <a href="../logout.php">Logout</a>
 </div>
 
-<!-- Main Content -->
+<!-- Main Contents -->
 <div class="main">
     <div class="page-title">Add New Book</div>
 
@@ -223,8 +222,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         </form>
     </div>
 
-    <footer><p>Najrul LIBRARY</p></footer>
+    <footer><p>NAJRUL LIBRARY</p></footer>
 </div>
-
 </body>
 </html>
