@@ -1,17 +1,14 @@
 <?php
 session_start();
 include "../db.php";
-
 if (!isset($_SESSION['user_id'])) {
     header("Location: ../login.php");
     exit();
 }
-
 if ($_SESSION['role'] !== "admin") {
     header("Location: ../login.php");
     exit();
 }
-
 if (isset($_GET['delete_id'])) {
     $delete_id = $_GET['delete_id'];
     $sql       = "DELETE FROM users WHERE id = '$delete_id'";
@@ -20,7 +17,6 @@ if (isset($_GET['delete_id'])) {
     header("Location: manage_users.php");
     exit();
 }
-
 $sql    = "SELECT * FROM users";
 $result = mysqli_query($conn, $sql);
 if (!$result) die("Fetch Error: " . mysqli_error($conn));
@@ -86,7 +82,6 @@ if (!$result) die("Fetch Error: " . mysqli_error($conn));
     </style>
 </head>
 <body>
-
 <div class="sidebar">
     <h3>Admin Dashboard</h3>
     <a href="dashboard.php">Dashboard</a>
@@ -98,7 +93,6 @@ if (!$result) die("Fetch Error: " . mysqli_error($conn));
     <a href="history_user.php">History</a>
     <a href="../logout.php">Logout</a>
 </div>
-
 <div class="main">
     <div class="page-title">Manage Users</div>
 
@@ -132,9 +126,7 @@ if (!$result) die("Fetch Error: " . mysqli_error($conn));
             <?php endwhile; ?>
         </tbody>
     </table>
-
-    <footer><p>Najrul LIBRARY</p></footer>
+    <footer><p>NAJRUL LIBRARY</p></footer>
 </div>
-
 </body>
 </html>
