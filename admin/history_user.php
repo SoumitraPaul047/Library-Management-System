@@ -1,7 +1,6 @@
 <?php
 session_start();
 include "../db.php";
-
 if (!isset($_SESSION['user_id'])) {
     header("Location: ../login.php");
     exit();
@@ -139,12 +138,12 @@ $result = mysqli_query($conn, $sql);
             </tr>
             <?php endwhile; ?>
         <?php else: ?>
-            <tr><td colspan="7">No history found</td></tr>
+            <tr><td colspan="7">No history found!</td></tr>
         <?php endif; ?>
         </tbody>
     </table>
 
-    <footer><p>Najrul LIBRARY</p></footer>
+    <footer><p>NAJRUL LIBRARY</p></footer>
 </div>
 
 </body>
