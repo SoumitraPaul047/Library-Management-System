@@ -1,19 +1,15 @@
 <?php
 session_start();
 include "db.php";
-
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit();
 }
-
 if ($_SESSION['role'] == "admin") {
     header("Location: admin/dashboard.php");
     exit();
 }
-
 $user_id = $_SESSION['user_id'];
-
 /* SEARCH LOGIC */
 $search      = "";
 $search_type = "title"; // default (book name)
@@ -226,7 +222,6 @@ if (!$result) {
     </style>
 </head>
 <body>
-
 <!-- Sidebar -->
 <div class="sidebar">
     <h3>Dashboard</h3>
@@ -298,8 +293,7 @@ if (!$result) {
         </div>
     <?php endif; ?>
 
-    <footer><p>Najrul LIBRARY</p></footer>
+    <footer><p>NAJRUL LIBRARY</p></footer>
 </div>
-
 </body>
 </html>
