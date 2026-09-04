@@ -8,7 +8,7 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
-// Redirect admin
+// Redirect admin 
 if ($_SESSION['role'] == "admin") {
     header("Location: admin/dashboard.php");
     exit();
