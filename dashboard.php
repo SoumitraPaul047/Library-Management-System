@@ -14,6 +14,8 @@ if ($_SESSION['role'] == "admin") {
     exit();
 }
 
+// Fetch books from data base
+$sql = "SELECT * FROM books";
 $user_id = $_SESSION['user_id'];
 
 /* SEARCH LOGIC */

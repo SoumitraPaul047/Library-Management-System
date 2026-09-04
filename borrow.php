@@ -3,6 +3,8 @@ session_start();
 include "db.php";
 $user_id = $_SESSION['user_id'];
 $book_id = $_POST['book_id'];
+
+// Insert transactions
 // Insert transaction
 $sql = "INSERT INTO transactions (user_id, book_id, issue_date, status)
         VALUES ('$user_id', '$book_id', NOW(), 'Borrowed')";

@@ -1,6 +1,8 @@
 <?php
 session_start();
 include "db.php";
+
+/* SEARCH LOGIC  */
 /* SEARCH LOGIC */
 $search      = "";
 $search_type = "title"; // default
