@@ -38,7 +38,7 @@ if (isset($_GET['search']) && $_GET['search'] !== "") {
     $search_condition = "";
 }
 
-// Fetch transaction history with book info using JOIN
+// Fetch transaction histories with book info using JOIN
 $sql = "SELECT t.*, b.title AS book_name, b.author AS book_author, b.image AS book_image
         FROM transactions t
         JOIN books b ON t.book_id = b.id
