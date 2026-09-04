@@ -4,7 +4,7 @@ include "db.php";
 $transaction_id = $_GET['id'];
 
 // Update transaction
-mysqli_query($conn, "
+mysqli_query($conn, " 
     UPDATE transactions 
     SET status='Returned', return_date=NOW() 
     WHERE id='$transaction_id'
