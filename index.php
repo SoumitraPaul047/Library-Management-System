@@ -76,7 +76,7 @@ if (!$result) {
             display: block;
             color: white;
             padding: 12px;
-            text-decoration: none;
+            text-decoration: none; 
         }
 
         .sidebar a:hover,
