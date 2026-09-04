@@ -140,7 +140,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         .message.success {
             background: #eafaf1;
             color: #27ae60;
-            border: 1px solid #a9dfbf;
+            border: 1px solid #a9dfbf; 
         }
 
         .message.error {
