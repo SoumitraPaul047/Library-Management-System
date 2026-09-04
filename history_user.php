@@ -3,7 +3,7 @@ session_start();
 include "db.php";
 
 // Check login
-if (!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['user_id'])) { 
     header("Location: login.php");
     exit();
 }
