@@ -273,7 +273,7 @@ $result = mysqli_query($conn, $sql);
     <a href="logout.php">Logout</a>
 </div>
 
-<!-- Main Content -->
+<!-- Main Contents -->
 <div class="main">
     <div class="page-title">Your Transaction History</div>
 
@@ -320,7 +320,7 @@ $result = mysqli_query($conn, $sql);
         </div>
     <?php endif; ?>
 
-    <footer><p>Najrul LIBRARY</p></footer>
+    <footer><p>NAJRUL LIBRARY</p></footer>
 </div>
 
 </body>
