@@ -5,7 +5,7 @@ include "db.php";
 $user_id = $_SESSION['user_id'];
 $book_id = $_POST['book_id'];
 
-// Insert transaction
+// Insert transactions
 $sql = "INSERT INTO transactions (user_id, book_id, issue_date, status)
         VALUES ('$user_id', '$book_id', NOW(), 'Borrowed')";
 mysqli_query($conn, $sql);
