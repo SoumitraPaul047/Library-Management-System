@@ -14,7 +14,7 @@ if ($_SESSION['role'] == "admin") {
     exit();
 }
 
-// Fetch books
+// Fetch books from data base
 $sql = "SELECT * FROM books";
 $result = mysqli_query($conn, $sql);
 ?>
