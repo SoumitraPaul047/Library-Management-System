@@ -95,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             font-size: 13px;
             font-weight: bold;
             color: #555;
-            margin-bottom: 5px;
+            margin-bottom: 5px; 
         }
 
         .form-group input {
